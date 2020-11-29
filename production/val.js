@@ -37,7 +37,7 @@ function myFunction()
     if (fnameValue != "")
 	  {
 			if (fname.value.match(letters)){
-			setSuccessFor(lname);
+			setSuccessFor(fname);
 		}
 			else{
 			setErrorFor(fname, 'Alphabet Characters only');

@@ -12,7 +12,7 @@ require 'openDB.php';
 		$res_u = mysqli_query($db, $sql_u) or die (mysqli_error($db));
 
 		if (mysqli_num_rows($res_u) > 0) {
-  			header("Location: index.html");
+  			header("Location: dashboard.html");
   			}
 		else{
 			echo '<script>
