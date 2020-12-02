@@ -63,6 +63,33 @@
       text-align: right;
       margin-right: 100px
     }
+    .button4 {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-bottom: 4px;
+      cursor: pointer;
+      width: 15%;
+      justify-content: center;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+    .login-container input[type=text],
+    .login-container input[type=password],
+    .login-container input[type=date],
+    select
+    {
+      width: 30%;
+      border-radius: 5px;
+      height: 30px;
+      border:1px solid black;
+    }
+
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -370,99 +397,26 @@
 
         <!-- footer content-->
         <div class=rcont>
+            <form id="certification" action="certification.php" method="post">
+                <center>
+                <h1>Certifcate of Residency</h1>
+                <div><br><br>
+                  <div class=login-container>
+                  <h3>Name</h3><br>
+                  <input type="text" id="name" name="fname" placeholder="First Name" required><br><br><br>
+                  <input type="text" id="name" name="lname" placeholder="Family Name" required><br><br><br>
+                  <input type="text" id="name" name="mname" placeholder="Middle Name" required><br><br><br>
+                  <h3>Date of Issuance</h3><br>
+                  <input type="date" id="date" name="date"required><br><br><br>
+                  <h3>Address</h3><br>
+                  <input type="text" id="address" name="address" placeholder="Current Address" required><br><br><br>
+                  <input type="submit" class="button4" value="Submit">
+                </div>
+                </div>
+                </center>
+            </form>
 
-          <div>
-            <center>
-              <h4>Republic of the Philippines</h4>
-              <h4>Barangay XYZ</h4>
-              <h4>Address</h4>
-              <h4>Phone Number</h4>
-              <hr>
-            </center>
           </div>
-          <div class=lcont>
-            <div class=leftbar>
-          <h3>Name</h3>
-          <p>Barangay Chairman</p>
-          <br>
-          <h3>KAGAWAD:</h3>
-          <br>
-          <h3>Name</h3>
-          <p>Chairman:</p>
-          <p>Comittee</p>
-          <br>
-          <h3>Name</h3>
-          <p>Chairman:</p>
-          <p>Comittee</p>
-          <br>
-          <h3>Name</h3>
-          <p>Chairman:</p>
-          <p>Comittee</p>
-          <br>
-          <h3>Name</h3>
-          <p>Chairman:</p>
-          <p>Comittee</p>
-          <br>
-          <h3>Name</h3>
-          <p>Chairman:</p>
-          <p>Comittee</p>
-          <br>
-          <h3>Name</h3>
-          <p>Chairman:</p>
-          <p>Comittee</p>
-          <br>
-          <h3>Name</h3>
-          <p>Chairman:</p>
-          <p>Comittee</p>
-          <br>
-          <h3>Name</h3>
-          <p>Barangay Treasurer</p>
-          <br>
-          <h3>Name</h3>
-          <p>Barangay Secretary</p>
-        </div>
-        </div>
-        <div class=rcont>
-          <p class=tright>Month Day, Year</p>
-          <center>
-            <h1>CERTIFICATION</h1>
-          </center>
-          <h5 class=text>To Whom It May Concern:</h5>
-          <br>
-          <p class=indent>  This is to certify that Ms./Mr./Mrs._____________________</p>
-          <p class=text>is a bonafide resident of Barangay XYZ, presently residing at:_____________________</p>
-          <p class=text>_____________________, Barangay XYZ, XYZ City.</p>
-          <br>
-          <br>
-          <p class=indent>This certification is being issued by this office upon the request of the above named</p>
-          <p class=text>person for whatever legal purposes it may serve.</p>
-        </div>
-        <div class=tright>
-          <div class=sigcont>
-            <h2 class=sig>Name</h2>
-            <h3 class=sig2>Barangay Captain</h3>
-          </div>
-        </div>
-        <div>
-          <h3 class=sig2>Attested by:</h3>
-          <br>
-          <br>
-          <h2>Name</h2>
-          <h3>Position</h3>
-        </div>
-        <div class=right>
-          <h7>Res. Cert. No.</h7>
-          <br>
-          <h7>Issued at:</h7>
-          <br>
-          <h7>Date issued:</h7>
-        </div>
-        <div class=rcont>
-          <center>
-            <h2>Not Valid Without BARANGAY SEAL</h2>
-          </center>
-        </div>
-      </div>
         <footer>
           <div class="pull-right">
             BARANGGAY XYZ INFORMATION SYSTEM MANAGEMENT</a>
