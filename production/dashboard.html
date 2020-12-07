@@ -10,15 +10,6 @@
     <title>Dashboard</title>
 
     <style>
-      .column {
-      float: left;
-      width: 50%;
-      }
-      .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
     p{
       font-size: 15px;
     }
@@ -80,11 +71,18 @@
                   </li>
                   <li><a href="tables_dynamic.html"><i class="fa fa-table"></i> Residents Information</a>
                   </li>
-                  <li><a><i class="fa fa-certificate"></i>Certificate Issuance</a>
+                  <li><a><i class="fa fa-certificate"></i>Certificate Issuance <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+<<<<<<< HEAD
                       <li><a href="chartjs.html">Chart JS</a></li>
                       <li><a href="chartjs2.html">Chart JS2</a></li>
+=======
+                      <li><a href="chartjs.html">Certificate of Residency</a></li>
+                      <li><a href="chartjs2.html">Baranggay Clearance</a></li>
+>>>>>>> 542688973c8005363d08aac4119266b993930c32
                     </ul>
+                  </li>
+                <li><a href="tables.html"><i class="fa fa-user"></i>Admins Configuration</a>
                   </li>
                 </div>
               </div>
@@ -138,7 +136,7 @@
           <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Registered Residents</span>
-              <div class="count green">0</div>
+              <div class="count green">102,434</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
@@ -158,82 +156,167 @@
             </div>
           </div>
           <!-- /top tiles -->
-
+<br><br>
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="dashboard_graph">
 
                 <div class="row x_title">
-                  <div class="col-md-9">
+                  <div class="col-md-12 col-sm-12 col-xs-12 bg-white">
                     <h3 style="font-size: 30px"><strong>CURRENT BARANGGAY OFFICIALS</strong></h3>
+                    <hr>
                   </div>
-                </div>
-
+                <br>
                 <div class="col-md-9 col-sm-9 col-xs-12 bg-white">
-                  <div class="row">
+                      <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+                            <th class="column-title">Last Name </th>
+                            <th class="column-title">First Name </th>
+                            <th class="column-title">Middle Name </th>
+                            <th class="column-title">Position </th>
+                            <th class="column-title">Address </th>
+                            <th class="column-title no-link last"><span class="nobr">Action</span>
+                            </th>
+                            <th class="bulk-actions" colspan="7">
+                              <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                            </th>
+                          </tr>
+                        </thead>
+                    <tbody>
+                          <tr class="even pointer">
+                            <td class=" ">Abrenica</td>
+                            <td class=" ">Fortunato</i></td>
+                            <td class=" ">L</td>
+                            <td class=" ">Mayor</td>
+                            <td class="a-right a-right ">Villasis, Pangasinan</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                          <tr class="odd pointer">
+                            <td class=" ">Robredo</td>
+                            <td class=" ">Leni<i class="success fa fa-long-arrow-up"></i>
+                            </td>
+                            <td class=" ">K</td>
+                            <td class=" ">Vice Mayor</td>
+                            <td class="a-right a-right ">Naga, Camarines Norte</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                          <tr class="even pointer">
+                            <td class=" ">May 24, 2014 10:55:33 PM</td>
+                            <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
+                            </td>
+                            <td class=" ">Mike Smith</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$432.26</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                          <tr class="odd pointer">
+                            <td class=" ">May 24, 2014 10:52:44 PM</td>
+                            <td class=" ">121000204</td>
+                            <td class=" ">Mike Smith</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$333.21</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                          <tr class="even pointer">
+                            <td class=" ">May 24, 2014 11:47:56 PM </td>
+                            <td class=" ">121000210</td>
+                            <td class=" ">John Blank L</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$7.45</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                          <tr class="odd pointer">
+                            <td class=" ">May 26, 2014 11:30:12 PM</td>
+                            <td class=" ">121000208 <i class="error fa fa-long-arrow-down"></i>
+                            </td>
+                            <td class=" ">John Blank L</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$741.20</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                          <tr class="even pointer">
+                            <td class=" ">May 26, 2014 10:55:33 PM</td>
+                            <td class=" ">121000203</td>
+                            <td class=" ">Mike Smith</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$432.26</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                          <tr class="odd pointer">
+                            <td class=" ">May 26, 2014 10:52:44 PM</td>
+                            <td class=" ">121000204</td>
+                            <td class=" ">Mike Smith</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$333.21</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
 
-                    <div class="column"><br>
-                      <p style="font-size: 20px"><strong> Last Name </strong></p>
-                      <hr>
-                      <p> Mortera </p>
-                      <p> Ortega </p>
-                      <p> Luy </p>
-                    </div>
-
-                    <div class="column"><br>
-                      <p style="font-size: 20px"><strong> First Name </strong></p>
-                      <hr>
-                      <p> Darryl Edison </p>
-                      <p> Nicolle Clarisse </p>
-                      <p> Enrico Ayrton </p>
-                    </div>
-
-                    <div class="column"><br>
-                      <p style="font-size: 20px"><strong> Middle Name </strong></p>
-                      <hr>
-                      <p> Burbano </p>
-                      <p> Santos </p>
-                      <p> Tan </p>
-                    </div>
-
-                    <div class="column"><br>
-                      <p style="font-size: 20px"><strong> Position </strong></p>
-                      <hr>
-                      <p> Mayor </p>
-                      <p> Vice Mayor </p>
-                      <p> Spokesperson </p>
-                    </div>
-
+                          <tr class="even pointer">
+                            <td class=" ">May 27, 2014 11:47:56 PM </td>
+                            <td class=" ">121000210</td>
+                            <td class=" ">John Blank L</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$7.45</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                          <tr class="odd pointer">
+                            <td class=" ">May 28, 2014 11:30:12 PM</td>
+                            <td class=" ">121000208</td>
+                            <td class=" ">John Blank L</td>
+                            <td class=" ">Paid</td>
+                            <td class="a-right a-right ">$741.20</td>
+                            <td class=" last"><a href="#">View</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                   </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
+                <div class="col-md-3 col-sm-3 col-xs-12 bg-grey">
                   <div class="x_title">
-                    <h2 style="font-size: 30px"><strong>PUROK</strong></h2>
+                    <h2 style="font-size: 30px; margin-left: 20px"><strong>PUROK</strong></h2>
                     <div class="clearfix"></div>
                   </div>
                     <div>
                       <br>
-                      <p style="font-size: 15px; margin-left: 20px">Purok 1 (Poblacion)</p>
+                      <a href=" " title="Residents:  15,234
+Male:  8,340
+Female:  6,894
+Voters:  12,756"
+                      style="background-color:#FFFFFF;color:#green ;text-decoration:none;font-size: 15px; margin-left: 70px">Purok 1 (Poblacion)</a>
                       <br><br>
                     </div>
+                    <hr>
                     <div>
-                      <p style="font-size: 15px; margin-left: 20px">Purok 2 (Zone I)</p>
-                      <br><br>
+                      <p style="font-size: 15px; margin-left: 70px">Purok 2 (Zone I)</p>
+                      <br>
                     </div>
+                    <hr>
                     <div>
-                      <p style="font-size: 15px; margin-left: 20px">Purok 3 (Zone II)</p>
-                      <br><br>
+                      <p style="font-size: 15px; margin-left: 70px">Purok 3 (Zone II)</p>
+                      <br>
                     </div>
+                    <hr>
                     <div>
-                      <p style="font-size: 15px; margin-left: 20px">Purok 4 (Zone III)</p>
+                      <p style="font-size: 15px; margin-left: 70px">Purok 4 (Zone III)</p>
                       <br>
                     </div>
                     </div>
                   </div>
+                  </div>
                 </div>
-                <div class="clearfix"></div>
-              </div>
             </div>
+          </div>
+          </div>
           </div>
           <br/>
         <!-- footer content -->

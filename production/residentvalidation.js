@@ -6,6 +6,7 @@ function validateAll(){
 }
 function myFunction1() 
  { 
+
     var lastnameValue = document.getElementById("lastname").value;
 	var firstnameValue = document.getElementById("firstname").value;
 	var middlenameValue = document.getElementById("middlename").value;
@@ -34,11 +35,8 @@ function myFunction1()
 	var resstatValue = document.getElementById("resstat").value;
 	
 	var letters = /^[A-Za-z ]+$/;
-	var numbers = /^[0-9]+$/;
-	var bod = bdayValue.replace(/-/gi,"");
-    var alphanum = /^([a-zA-Z@._0-9]+)$/;  
-	var uname = /^([a-zA-Z-_]+)$/;
-	var pass1 = /^([a-zA-Z0-9]+)$/;	
+	var address = /^[0-9A-Za-z .,]+$/;
+    var alphanum = /^([a-zA-Z@._0-9]+)$/;  	
 	
     if (lastnameValue != "") 
 	  {
@@ -69,7 +67,7 @@ function myFunction1()
 			setErrorFor(firstname, 'First Name cannot be blank');
 			 return false;
 		}	
-		
+alert("test")		
 	if (middlenameValue != "") 
 	  {
 			if (middlename.value.match(letters)){
@@ -121,20 +119,21 @@ function myFunction1()
 			setErrorFor(birthday, 'Birthday cannot be blank');
 			 return false;
 		}
-		
-	if (birthplaceValue != "") 
+	
+    if (birthplaceValue != "") 
 	  {
 			if (birthplace.value.match(letters)){
 			setSuccessFor(birthplace);			
 		}
 			else{
-			setErrorFor(birthplace, 'Alphabet Characters only');
-			return false;			
+			setErrorFor(birthplace, 'Alphabet Characters only');	
+			 return false;
 	  }
 	  }
 	else {
-			setSuccessFor(birthplace);
-		}
+			setErrorFor(birthplace, 'Birth Place cannot be blank');
+			 return false;
+		}	
 		
 	if (sexValue == "0") 
 	  {
@@ -154,87 +153,204 @@ function myFunction1()
 			setSuccessFor(civilstat);	
 	  }
 	  
-	if (nationalityValue != "") 
+    if (nationalityValue != "") 
 	  {
 			if (nationality.value.match(letters)){
 			setSuccessFor(nationality);			
 		}
 			else{
-			setErrorFor(birthplace, 'Alphabet Characters only');
-			return false;			
+			setErrorFor(nationality, 'Alphabet Characters only');	
+			 return false;
 	  }
 	  }
 	else {
-			setSuccessFor(birthplace);
-		}
+			setErrorFor(nationality, 'Nationality cannot be blank');
+			 return false;
+		}	
 
-    if (studnumValue != "") 
+    if (religionValue != "") 
 	  {
-	 if(studnum.value.match(numbers)){
-		if(studnum.value.length == 11){
-			setSuccessFor(studnum);		
-		  }
-		else{
-			  setErrorFor(studnum, 'Student Number should contain 11 numbers');
-			   return false;
+			if (religion.value.match(letters)){
+			setSuccessFor(religion);			
 		}
+			else{
+			setErrorFor(religion, 'Alphabet Characters only');	
+			 return false;
 	  }
-	 else{
-		setErrorFor(studnum, 'Numerical Characters only');	
-		 return false;
 	  }
-	  }
-	  
 	else {
-			setErrorFor(studnum, 'Student Number cannot be blank');
+			setErrorFor(religion, 'Religion cannot be blank');
 			 return false;
 		}
-	 
-		
-	if (yearValue == "0") 
+
+    if (occupationValue != "") 
 	  {
-			setErrorFor(year, 'Year Level cannot be blank');	
- return false;			
+			if (occupation.value.match(letters)){
+			setSuccessFor(occupation);			
+		}
+			else{
+			setErrorFor(occupation, 'Alphabet Characters only');	
+			 return false;
+	  }
+	  }
+	else {
+			setErrorFor(occupation, 'Occupation cannot be blank');
+			 return false;
+		}
+
+	if (sectorValue == "0") 
+	  {
+			setErrorFor(sector, 'Sector cannot be blank');	
+			return false;			
 		}
 	else{
-			setSuccessFor(year);	
+			setSuccessFor(sector);	
 	  }
-	  	
 	  
+    if (spousenameValue != "") 
+	  {
+			if (spousename.value.match(letters)){
+			setSuccessFor(spousename);			
+		}
+			else{
+			setErrorFor(spousename, 'Alphabet Characters only');	
+			 return false;
+	  }
+	  }
+	else {
+			setErrorFor(spousename, 'Spouse Name cannot be blank');
+			 return false;
+		}
+		
+    if (spouseoccupationValue != "") 
+	  {
+			if (spouseoccupation.value.match(letters)){
+			setSuccessFor(spouseoccupation);			
+		}
+			else{
+			setErrorFor(spouseoccupation, 'Alphabet Characters only');	
+			 return false;
+	  }
+	  }
+	else {
+			setErrorFor(spouseoccupation, 'Spouse Occupation cannot be blank');
+			 return false;
+		}
+		
+	if (voterstatValue == "0") 
+	  {
+			setErrorFor(voterstat, 'Voter Status cannot be blank');	
+			return false;			
+		}
+	else{
+			setSuccessFor(voterstat);	
+	  }
+	  
+    if (cityaddValue != "") 
+	  {
+			if (cityadd.value.match(address)){
+			setSuccessFor(cityadd);			
+		}
+			else{
+			setErrorFor(cityadd, 'Alphabet Characters only');	
+			 return false;
+	  }
+	  }
+	else {
+			setErrorFor(cityadd, 'City Address cannot be blank');
+			 return false;
+		}
+		
+    if (provaddValue != "") 
+	  {
+			if (provadd.value.match(address)){
+			setSuccessFor(provadd);			
+		}
+			else{
+			setErrorFor(provadd, 'Alphabet Characters only');	
+			 return false;
+	  }
+	  }
+	else {
+			setErrorFor(provadd, 'Provincial Address cannot be blank');
+			 return false;
+		}
+		
+	if (purokValue == "0") 
+	  {
+			setErrorFor(purok, 'Purok cannot be blank');	
+			return false;			
+		}
+	else{
+			setSuccessFor(purok);	
+	  }
 
 		
-	if (mobnumValue != "") 
+	if (homenum1Value != "") 
 	{
-	if(mobnum.value.match(numbers)){
-		if(mobnum.value.length == 10){
-			setSuccessFor(mobnum);		
+		if(homenum1.value.length == 11){
+			setSuccessFor(homenum1);		
 		  }
 		else{
-			  setErrorFor(mobnum, 'Incorrect Mobile Number');
+			  setErrorFor(homenum1, 'Incorrect Home Number');
 			   return false;
 		}
 	  }
 	 else{
-		setErrorFor(mobnum, 'Numerical Characters only');	
+		setErrorFor(homenum1, 'Numerical Characters only');	
 		 return false;
 	  }
+	  
+	if (homenum2Value != "") 
+	{
+		if(homenum2.value.length == 11){
+			setSuccessFor(homenum2);		
+		  }
+		else{
+			  setErrorFor(homenum2, 'Incorrect Home Number');
+			   return false;
+		}
+	  }
+	 else{
+		setErrorFor(homenum2, 'Numerical Characters only');	
+		 return false;
+	  }
+
+	if (mobnum1Value != "") 
+	{
+		if(mobnum1.value.length == 11){
+			setSuccessFor(mobnum1);		
+		  }
+		else{
+			  setErrorFor(mobnum1, 'Incorrect Home Number');
+			   return false;
+		}
+	  }
+	 else{
+		setErrorFor(mobnum1, 'Numerical Characters only');	
+		 return false;
 	  }
 	  
-	else {
-			setErrorFor(mobnum, 'Student Number cannot be blank');
-			 return false;
+	if (mobnum2Value != "") 
+	{
+		if(mobnum2.value.length == 11){
+			setSuccessFor(mobnum2);		
+		  }
+		else{
+			  setErrorFor(mobnum2, 'Incorrect Home Number');
+			   return false;
 		}
+	  }
+	 else{
+		setErrorFor(mobnum2, 'Numerical Characters only');	
+		 return false;
+	  }
+	  
 		
 	if (emailValue != "") 
 	  {
 	  if(emailValue.match(alphanum)){
-		  if (/@ue.edu.ph\s*$/.test(emailValue)){
-				setSuccessFor(email);
-		}
-		else{
-			setErrorFor(email, 'Incorrect Email Domain');
-			 return false;
-		}
+		setSuccessFor(email);
 	  }
 		else{
 		setErrorFor(email,'Incorrect Email Format');
@@ -246,75 +362,25 @@ function myFunction1()
 			setErrorFor(email, 'Email cannot be blank');
 			 return false;
 		}
-		
-    if (userValue != "") 
-	  {
-	  if(user.value.match(uname)){
-		  if(user.value.length >=8 && user.value.length <=15){
-			setSuccessFor(user);			
-		}
-			else{
-			setErrorFor(user, 'Incorrect Username');
- return false;			
-	  }
-	  }
-	  else{
-	  setErrorFor(user, 'Incorrect Format');
-	   return false;
-	  }
-	  }
-	else {
-			setErrorFor(user, 'Username cannot be blank');
-			 return false;
-		}
-	
-    if (passValue != "") 
-	  {
-	  if(pass.value.match(pass1))
-			{
-		  if(pass.value.length >=8 && pass.value.length <=20){
-			setSuccessFor(pass);			
-		}
-			else{
-			setErrorFor(pass, 'Incorrect Password');	
-			 return false;
-	  }		
-		}
-			else{
-			setErrorFor(pass, 'Incorrect Format');	
-			 return false;
-	  }
-	  }
-	else {
-			setErrorFor(pass, 'Password cannot be blank');
-			 return false;
-		}		
 
-		
-	if (conpassValue !=""){
-	if (conpass.value.match(pass.value)) 
+ 	if (restypeValue == "0") 
 	  {
-			setSuccessFor(conpass);			
+			setErrorFor(restype, 'Resident Type cannot be blank');	
+			return false;			
 		}
-	else {
-			setErrorFor(conpass, 'Password Mismatch');
-			 return false;
-		}
-	}
 	else{
-		setErrorFor(conpass,'Confirm Password Cannot be Blank');
-		 return false;
-	}
+			setSuccessFor(restype);	
+	  }
 
-
-	if (document.getElementById('cb').checked == true){
-		setSuccessFor(cb);
-	}
+	if (resstatValue == "0") 
+	  {
+			setErrorFor(resstat, 'Resident Status cannot be blank');	
+			return false;			
+		}
 	else{
-		setErrorFor(cb, 'Accept the Terms & Condition');
-			 return false;
-	}
-	  
+			setSuccessFor(resstat);	
+	  }
+
      }
 
 	
@@ -322,11 +388,11 @@ function myFunction1()
 function setErrorFor(input, message) {
 	var formControl = input.parentElement;
 	var small = formControl.querySelector('small');
-	formControl.className = 'form-control error';
+	formControl.className = 'form-group error';
 	small.innerText = message;
 }
 
 function setSuccessFor(input) {
 	var formControl = input.parentElement;
-	formControl.className = 'form-control success';
+	formControl.className = 'form-group success';
 }
