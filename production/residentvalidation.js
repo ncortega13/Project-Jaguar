@@ -67,7 +67,7 @@ function myFunction1()
 			setErrorFor(firstname, 'First Name cannot be blank');
 			 return false;
 		}	
-alert("test")		
+		
 	if (middlenameValue != "") 
 	  {
 			if (middlename.value.match(letters)){
@@ -81,7 +81,7 @@ alert("test")
 	else {
 			setSuccessFor(middlename);
 		}
-		
+
 	if (aliasValue != "") 
 	  {
 			if (alias.value.match(letters)){

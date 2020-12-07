@@ -28,12 +28,13 @@
     <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
 
- <body class="nav-md">
+  <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
+
               <a class="site_title"><i class="fa fa-building"></i> <span>Baranggay XYZ</span></a>
             </div>
 
@@ -62,17 +63,13 @@
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
-                  <li><a href="tables_dynamic.html"><i class="fa fa-table"></i> Residents Information</a>
+                  <li><a href="residents.php"><i class="fa fa-table"></i> Residents Information</a>
                   </li>
                   <li><a><i class="fa fa-certificate"></i>Certificate Issuance <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-<<<<<<< HEAD
-                      <li><a href="chartjs.html">Chart JS</a></li>
-                      <li><a href="chartjs2.html">Chart JS2</a></li>
-=======
                       <li><a href="chartjs.html">Certificate of Residency</a></li>
                       <li><a href="chartjs2.html">Baranggay Clearance</a></li>
->>>>>>> 542688973c8005363d08aac4119266b993930c32
+
                     </ul>
                   </li>
                 <li><a href="tables.html"><i class="fa fa-user"></i>Admins Configuration</a>
@@ -140,34 +137,52 @@
                     <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action">
                       <thead>
                         <tr>
+						<td>
+							Action
                           <th>Resident ID</th>
                           <th>Last Name</th>
                           <th>First Name</th>
                           <th>Middle Name</th>
                           <th>Sex</th>
-						  <th>Purok</th>		
+						  <th>Purok</th>
+
+						 </td>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>                       
-                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-						  </td>
-                        </tr>
-
-                      </tbody>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT resident_id, last_name, first_name, middle_name, sex, purok FROM resident";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo "<tr>" . 
+'<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a><a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>' .
+"<td>" . $row["resident_id"] . "</td>". 
+"<td>" . $row["last_name"] . "</td>" . 
+"<td>" . $row["first_name"] . "</td>" . 
+"<td>" . $row["middle_name"] . "</td>" .
+"<td>" . $row["sex"] . "</td>" . 
+"<td>" . $row["purok"] . "</td>". 
+"</tr>" ;
+}
+echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>				  
                     </table>
                   </div>
                 </div>
               </div>		
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+
         <!-- /page content -->
 
         <!-- footer content -->
