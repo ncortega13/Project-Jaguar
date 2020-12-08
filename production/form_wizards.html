@@ -56,12 +56,13 @@
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
-                  <li><a href="tables_dynamic.html"><i class="fa fa-table"></i> Residents Information</a>
+                  <li><a href="residents.php"><i class="fa fa-table"></i> Residents Information</a>
                   </li>
                   <li><a><i class="fa fa-certificate"></i>Certificate Issuance <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="chartjs.html">Certificate of Residency</a></li>
                       <li><a href="chartjs2.html">Baranggay Clearance</a></li>
+
                     </ul>
                   </li>
                 <li><a href="tables.html"><i class="fa fa-user"></i>Admins Configuration</a>
@@ -145,18 +146,18 @@
                         <form action="resident.php" method="POST"class="form-horizontal form-label-left">
 
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name: </label>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name: <span class="required">*</span></label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="lastname" name="lastname" class="form-control col-md-7 col-xs-12"><br>
+                              <input type="text" id="lastname" required="required" name="lastname" class="form-control col-md-7 col-xs-12"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name: </label>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name: <span class="required">*</span></label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="firstname" name="firstname" class="form-control col-md-7 col-xs-12"><br>
+                              <input type="text" id="firstname" required="required" name="firstname" class="form-control col-md-7 col-xs-12"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -192,7 +193,7 @@
                           <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input id="birthday" name="birthday" class="date-picker form-control col-md-7 col-xs-12" type="date"><br>
+                              <input id="birthday" name="birthday"  class="date-picker form-control col-md-7 col-xs-12" type="date"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -458,6 +459,16 @@
       </div>
     </div>
 
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
 
 	
   </body>
