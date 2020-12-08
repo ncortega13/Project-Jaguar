@@ -35,7 +35,7 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
 
-              <a class="site_title"><i class="fa fa-building"></i> <span>Baranggay XYZ</span></a>
+              <a class="site_title"><img src="images/imga.jpg"width="50" height="50" style="border-radius: 55px"> <span>Baranggay XYZ</span></a>
             </div>
 
             <div class="clearfix"></div>
