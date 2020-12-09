@@ -1,13 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+    h4{
+      margin-top: -1px;
+      margin-bottom: -1px;
+      }
+    h3{
+        margin-top: -1px;
+        margin-bottom: -1px;
+      }
+    h5{
+      margin-top: -1px;
+      margin-bottom: -1px;
+    }
+    p{
+      margin-top: -1px;
+      margin-bottom: -1px;
+      }
+      .main{
+        float:right;
+        width:60%;
+        height: 100%;
+      }
+    .text{
+      font-size: 20px;
+    }
+    .lcont{
+      float:left;
+      width:20%;
+      height:100%;
+    }
+    .rcont{
+      float:right;
+      width:80%;
+      height:100%;
+    }
+    .leftbar{
+      margin-left: 50px
+    }
+    .tright{
+      margin-top: 100px;
+      text-align: right;
+      margin-right: 100px;
+    }
+    .sig{
+      font-weight: 400;
+      margin-right: 50px;
+    }
+    .indent{
+      text-indent: 50px;
+      font-size: 20px;
+    }
+    .sigcont{
+      font-weight: 400;
+      margin-top:450px;
+    }
+    .sig2{
+      font-weight: 400;
+    }
+    .right{
+      text-align: right;
+      margin-right: 100px
+    }
+    .button4 {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-bottom: 4px;
+      cursor: pointer;
+      width: 15%;
+      justify-content: center;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+    .login-container input[type=text],
+    .login-container input[type=password],
+    .login-container input[type=date],
+    select
+    {
+      width: 30%;
+      border-radius: 5px;
+      height: 30px;
+      border:1px solid black;
+    }
+
+    </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Baranggay Clearance</title>
+    <title>Certificate of Residency</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,8 +109,10 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
-
-  <body class="nav-md">
+  <body>
+    </body>
+<!---->
+   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -110,9 +202,9 @@
             </nav>
           </div>
         </div>
-        <!-- /top navigation -->
+        <!-- top navigation-->
 
-        <!-- page content -->
+        <!-- page content
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
@@ -135,10 +227,10 @@
             <div class="clearfix"></div>
 
             <div class="row">
-              <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Line Graph <small>Sessions</small></h2>
+                    <h2>Line graph<small>Sessions</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -162,10 +254,10 @@
                 </div>
               </div>
 
-              <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Bar Graph <small>Sessions</small></h2>
+                    <h2>Bar graph <small>Sessions</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -188,38 +280,13 @@
                   </div>
                 </div>
               </div>
-
-              <div class="col-md-4 col-sm-6 col-xs-12">
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Donut Chart Graph <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <canvas id="canvasDoughnut"></canvas>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Radar Chart <small>Sessions</small></h2>
+                    <h2>Radar <small>Sessions</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -243,10 +310,10 @@
                 </div>
               </div>
 
-              <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Pie Area Chart <small>Sessions</small></h2>
+                    <h2>Donut Graph <small>Sessions</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -265,15 +332,17 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <canvas id="polarArea"></canvas>
+                    <canvas id="canvasDoughnut"></canvas>
                   </div>
                 </div>
               </div>
-
-              <div class="col-md-4 col-sm-6 col-xs-12">
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Pie Chart Graph <small>Sessions</small></h2>
+                    <h2>Pie Graph Chart <small>Sessions</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -296,21 +365,66 @@
                   </div>
                 </div>
               </div>
+
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Pie Area Graph <small>Sessions</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <canvas id="polarArea"></canvas>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="clearfix"></div>
-            <br />
           </div>
         </div>
-        <!-- /page content -->
+        <!-- page content -->
 
-        <!-- footer content -->
+        <!-- footer content-->
+        <div class=rcont>
+            <form id="certification" action="certification.php" method="post">
+                <center>
+                <h1>Certifcate of Residency</h1>
+                <div><br><br>
+                  <div class=login-container>
+                  <h3>Name</h3><br>
+                  <input type="text" id="name" name="fname" placeholder="First Name" required><br><br><br>
+                  <input type="text" id="name" name="lname" placeholder="Family Name" required><br><br><br>
+                  <input type="text" id="name" name="mname" placeholder="Middle Name" required><br><br><br>
+                  <h3>Date of Issuance</h3><br>
+                  <input type="date" id="date" name="date"required><br><br><br>
+                  <h3>Address</h3><br>
+                  <input type="text" id="address" name="address" placeholder="Current Address" required><br><br><br>
+                  <input type="submit" class="button4" value="Submit">
+                </div>
+                </div>
+                </center>
+            </form>
+
+          </div>
         <footer>
           <div class="pull-right">
             BARANGGAY XYZ INFORMATION SYSTEM MANAGEMENT</a>
           </div>
           <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
+        </footer>        <!-- footer content -->
       </div>
     </div>
 
