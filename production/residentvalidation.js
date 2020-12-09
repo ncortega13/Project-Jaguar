@@ -82,33 +82,35 @@ function myFunction1()
 			setSuccessFor(middlename);
 		}
 
-	if (aliasValue != "") 
+    if (aliasValue != "") 
 	  {
 			if (alias.value.match(letters)){
 			setSuccessFor(alias);			
 		}
 			else{
-			setErrorFor(alias, 'Alphabet Characters only');
-			return false;			
+			setErrorFor(alias, 'Alphabet Characters only');	
+			 return false;
 	  }
 	  }
 	else {
-			setSuccessFor(alias);
-		}
+			setErrorFor(alias, 'Alias cannot be blank');
+			 return false;
+		}	
 
-	if (facemarksValue != "") 
+    if (facemarksValue != "") 
 	  {
 			if (facemarks.value.match(letters)){
 			setSuccessFor(facemarks);			
 		}
 			else{
-			setErrorFor(facemarks, 'Alphabet Characters only');
-			return false;			
+			setErrorFor(facemarks, 'Alphabet Characters only');	
+			 return false;
 	  }
 	  }
 	else {
-			setSuccessFor(facemarks);
-		}
+			setErrorFor(facemarks, 'Facemarks cannot be blank');
+			 return false;
+		}	
 
 	if (birthdayValue != "") 
 	  {
