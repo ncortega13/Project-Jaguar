@@ -415,7 +415,7 @@
               $fname = $row['first_name'];
               $lname = $row['last_name'];
 
-              $output .= '<div>'.'Name: '.$first_name.' '.$middle_name.' '.$last_name.'<br'.
+              $output .= '<div>'.'Name: '.$first_name.' '.$middle_name.' '.$last_name.'<br>'.
               $sex.'</div>';
             }
           }

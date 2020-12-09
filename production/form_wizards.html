@@ -10,6 +10,16 @@
 			<script src="residentvalidation.js"></script>
     <title>Registration</title>
 
+<style>
+     .column {
+  float: left;
+  width: 50%;
+  }
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+</style>
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -143,8 +153,10 @@
                     <!-- Smart Wizard -->
 
 					    <h2 class="StepTitle">Personal Information</h2>
+              <br><br>
                         <form action="resident.php" method="POST"class="form-horizontal form-label-left">
-
+                          <div class="row">
+                            <div class="column">
                           <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -211,7 +223,7 @@
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Sex: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select id="sex" name="sex" class="form-control">
+                          <select  style="width: 382px" id="sex" name="sex" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -221,10 +233,12 @@
 								<small>Error message</small> 
                         </div>
 						</div>
+            </div>
+            <div class="column">
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Civil Status: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select id="civilstat" name="civilstat" class="form-control">
+                          <select  style="width: 382px" id="civilstat" name="civilstat" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Single">Single</option>
                             <option value="Married">Married</option>
@@ -265,7 +279,7 @@
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Sector: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select id="sector" name="sector" class="form-control">
+                          <select  style="width: 382px" id="sector" name="sector" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Private">Private</option>
                             <option value="Public">Public</option>
@@ -306,7 +320,7 @@
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Voter Status: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select id="voterstat" name="voterstat" class="form-control">
+                          <select  style="width: 382px" id="voterstat" name="voterstat" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
@@ -316,7 +330,9 @@
 							<small>Error message</small>
                         </div>
 						</div>						
-					
+					   
+            </div>
+              </div>
                       
 
                         <h2 class="StepTitle">Contact Information</h2>
@@ -342,7 +358,7 @@
                         <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Purok:</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select id="purok" name="purok" class="form-control">
+                          <select  style="width: 773px" id="purok" name="purok" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -406,7 +422,7 @@
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Resident Type:</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select id="restype" name="restype" class="form-control">
+                          <select  style="width: 773px" id="restype" name="restype" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Native">Native</option>
                             <option value="Rentee">Rentee</option>
@@ -419,7 +435,7 @@
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Resident Status:</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select id="resstat" name="resstat" class="form-control">
+                          <select  style="width: 773px" id="resstat" name="resstat" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Active">Active</option>
                             <option value="Inactive">Inactive</option>
@@ -430,12 +446,6 @@
 								<small>Error message</small>
                         </div>
 						</div>
-						
-<<<<<<< HEAD
-						                
-=======
-						
->>>>>>> 8b1f6c69d0b74ad467125c1a083a3e3bdecb8657
 						    <center><button class="btn btn-success" onclick="return myFunction1()" id="register" name="register">Submit</button></center>
                  
 					</form>
