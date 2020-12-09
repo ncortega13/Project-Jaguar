@@ -97,7 +97,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Chart JS Graph Examples | Gentelella Alela! by Colorlib</title>
+    <title>Certificate of Residency</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -433,7 +433,7 @@
                   <div class=login-container>
                   <h3>Input Resident ID</h3><br>
                   <input type="text" id="resid" name="resid" required><br><br><br>
-                  <input type="submit" value="Search">
+                  <center><button class="btn btn-success" onclick="return myFunction1()" id="register" name="register">Submit</button></center>
                 </div>
                 </div>
                 </center>

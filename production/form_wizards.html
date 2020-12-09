@@ -222,8 +222,8 @@
                           </div>
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Sex: </label>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 382px" id="sex" name="sex" class="form-control">
+                        <div style="width: 263px" class="col-md-9 col-sm-9 col-xs-12">
+                          <select id="sex" name="sex" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -238,7 +238,7 @@
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Civil Status: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 382px" id="civilstat" name="civilstat" class="form-control">
+                          <select  style="width: 242px" id="civilstat" name="civilstat" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Single">Single</option>
                             <option value="Married">Married</option>
@@ -279,7 +279,7 @@
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Sector: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 382px" id="sector" name="sector" class="form-control">
+                          <select  style="width: 242px" id="sector" name="sector" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Private">Private</option>
                             <option value="Public">Public</option>
@@ -320,7 +320,7 @@
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Voter Status: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 382px" id="voterstat" name="voterstat" class="form-control">
+                          <select  style="width: 242px" id="voterstat" name="voterstat" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
@@ -336,7 +336,8 @@
                       
 
                         <h2 class="StepTitle">Contact Information</h2>
-						
+						<div class="row">
+              <div class="column">
 						<div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">City Address: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -358,7 +359,7 @@
                         <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Purok:</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 773px" id="purok" name="purok" class="form-control">
+                          <select  style="width: 242px" id="purok" name="purok" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -378,6 +379,8 @@
 								<small>Error message</small>
                             </div>
                         </div>
+                        </div>
+                        <div class="column">
 						<div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Home Number 2: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -414,15 +417,17 @@
 								<small>Error message</small> 
                             </div>
                         </div>
-                     
+                     </div>
+            </div>
 
 					 
                         <h2 class="StepTitle">Registration Details</h2>
-                        
+          <div class="row">
+            <div class="column">            
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Resident Type:</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 773px" id="restype" name="restype" class="form-control">
+                          <select style="width: 242px" id="restype" name="restype" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Native">Native</option>
                             <option value="Rentee">Rentee</option>
@@ -432,10 +437,12 @@
 								<small>Error message</small>
                         </div>
 						</div>
+            </div>
+            <div class="column">
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Resident Status:</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 773px" id="resstat" name="resstat" class="form-control">
+                          <select style="width: 242px" id="resstat" name="resstat" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Active">Active</option>
                             <option value="Inactive">Inactive</option>
@@ -446,6 +453,8 @@
 								<small>Error message</small>
                         </div>
 						</div>
+                        </div>
+          </div>  
 						    <center><button class="btn btn-success" onclick="return myFunction1()" id="register" name="register">Submit</button></center>
                  
 					</form>
