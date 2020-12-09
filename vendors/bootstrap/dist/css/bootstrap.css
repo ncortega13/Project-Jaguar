@@ -2755,6 +2755,7 @@ select.input-lg {
 textarea.input-lg,
 select[multiple].input-lg {
   height: auto;
+  width: 10px;
 }
 .form-group-lg .form-control {
   height: 46px;
@@ -2804,7 +2805,7 @@ select[multiple].input-lg {
   line-height: 46px;
 }
 .input-sm + .form-control-feedback,
-.input-group-sm + .form-control-feedback,
+.input-group-sm + .form-control-feedbacks,
 .form-group-sm .form-control + .form-control-feedback {
   width: 30px;
   height: 30px;
@@ -4383,7 +4384,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-form .form-control {
     display: inline-block;
-    width: auto;
+    width: 1000px;
     vertical-align: middle;
   }
   .navbar-form .form-control-static {

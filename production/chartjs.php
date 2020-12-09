@@ -97,7 +97,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Chart JS Graph Examples | Gentelella Alela! by Colorlib</title>
+    <title>Certificate of Residency</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -143,7 +143,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="dashboard.html"><i class="fa fa-desktop"></i>Dashboard</a>
+                  <li><a href="index.html"><i class="fa fa-desktop"></i>Dashboard</a>
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
@@ -151,7 +151,7 @@
                   </li>
                   <li><a><i class="fa fa-certificate"></i>Certificate Issuance <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Certificate of Residency</a></li>
+                      <li><a href="chartjs.php">Certificate of Residency</a></li>
                       <li><a href="chartjs2.html">Baranggay Clearance</a></li>
 
                     </ul>
@@ -415,7 +415,12 @@
               $fname = $row['first_name'];
               $lname = $row['last_name'];
 
+<<<<<<< HEAD
               $output .= '<div>'.'Name: '.$first_name.' '.$middle_name.' '.$last_name.'<br'.$sex.'</div>';
+=======
+              $output .= '<div>'.'Name: '.$first_name.' '.$middle_name.' '.$last_name.'<br>'.
+              $sex.'</div>';
+>>>>>>> 95ca02519d7faeef1e40341a09e4861da29cd93b
             }
           }
         }
@@ -432,7 +437,7 @@
                   <div class=login-container>
                   <h3>Input Resident ID</h3><br>
                   <input type="text" id="resid" name="resid" required><br><br><br>
-                  <input type="submit" value="Search">
+                  <center><button class="btn btn-success" onclick="return myFunction1()" id="register" name="register">Submit</button></center>
                 </div>
                 </div>
                 </center>
