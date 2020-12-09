@@ -12,7 +12,7 @@ function myFunction1()
 	var middlenameValue = document.getElementById("middlename").value;
 	var aliasValue = document.getElementById("alias").value;
 	var facemarksValue = document.getElementById("facemarks").value;
-	var birthdaydayValue = document.getElementById("birthday").value;
+	var birthdayValue = document.getElementById("birthday").value;
 	var birthplaceValue = document.getElementById("birthplace").value;	 
 	var sexValue = document.getElementById("sex").value;	 
 	var civilstatValue = document.getElementById("civilstat").value;
@@ -35,6 +35,7 @@ function myFunction1()
 	var resstatValue = document.getElementById("resstat").value;
 	
 	var letters = /^[A-Za-z ]+$/;
+	var letters1 = /^[A-Za-z ,]+$/;
 	var address = /^[0-9A-Za-z .,]+$/;
     var alphanum = /^([a-zA-Z@._0-9]+)$/;  	
 	
@@ -124,7 +125,7 @@ function myFunction1()
 	
     if (birthplaceValue != "") 
 	  {
-			if (birthplace.value.match(letters)){
+			if (birthplace.value.match(letters1)){
 			setSuccessFor(birthplace);			
 		}
 			else{
