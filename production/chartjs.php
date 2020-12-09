@@ -143,7 +143,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="dashboard.html"><i class="fa fa-desktop"></i>Dashboard</a>
+                  <li><a href="index.html"><i class="fa fa-desktop"></i>Dashboard</a>
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
@@ -151,7 +151,7 @@
                   </li>
                   <li><a><i class="fa fa-certificate"></i>Certificate Issuance <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Certificate of Residency</a></li>
+                      <li><a href="chartjs.php">Certificate of Residency</a></li>
                       <li><a href="chartjs2.html">Baranggay Clearance</a></li>
 
                     </ul>
