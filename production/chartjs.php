@@ -415,12 +415,12 @@
               $fname = $row['first_name'];
               $lname = $row['last_name'];
 
-<<<<<<< HEAD
+
               $output .= '<div>'.'Name: '.$first_name.' '.$middle_name.' '.$last_name.'<br'.$sex.'</div>';
-=======
+
               $output .= '<div>'.'Name: '.$first_name.' '.$middle_name.' '.$last_name.'<br>'.
               $sex.'</div>';
->>>>>>> 95ca02519d7faeef1e40341a09e4861da29cd93b
+
             }
           }
         }
