@@ -39,7 +39,7 @@ if (isset($lastname,$firstname,$middlename,$alias,$facemarks,$birthday,$birthpla
                 	</script>';
 
                 echo '<script>
-				window.history.go(-1);
+				window.location= "residents.php";
 					</script>';
 			exit();
 		}

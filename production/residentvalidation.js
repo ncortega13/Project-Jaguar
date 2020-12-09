@@ -35,7 +35,6 @@ function myFunction1()
 	var resstatValue = document.getElementById("resstat").value;
 	
 	var letters = /^[A-Za-z ]+$/;
-	var letters1 = /^[A-Za-z ,]+$/;
 	var address = /^[0-9A-Za-z .,]+$/;
     var alphanum = /^([a-zA-Z@._0-9]+)$/;  	
 	
@@ -125,7 +124,7 @@ function myFunction1()
 	
     if (birthplaceValue != "") 
 	  {
-			if (birthplace.value.match(letters1)){
+			if (birthplace.value.match(address)){
 			setSuccessFor(birthplace);			
 		}
 			else{
@@ -291,7 +290,7 @@ function myFunction1()
 		
 	if (homenum1Value != "") 
 	{
-		if(homenum1.value.length == 11){
+		if(homenum1.value.length == 8){
 			setSuccessFor(homenum1);		
 		  }
 		else{
@@ -306,7 +305,7 @@ function myFunction1()
 	  
 	if (homenum2Value != "") 
 	{
-		if(homenum2.value.length == 11){
+		if(homenum2.value.length == 8){
 			setSuccessFor(homenum2);		
 		  }
 		else{
