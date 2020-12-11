@@ -1,3 +1,4 @@
+
 function validateAll(){
     
     if (myFunction1){
@@ -209,34 +210,32 @@ function myFunction1()
 			setSuccessFor(sector);	
 	  }
 	  
-    if (spousenameValue != "") 
+	if (spousenameValue != "") 
 	  {
 			if (spousename.value.match(letters)){
 			setSuccessFor(spousename);			
 		}
 			else{
-			setErrorFor(spousename, 'Alphabet Characters only');	
-			 return false;
+			setErrorFor(spousename, 'Alphabet Characters only');
+			return false;			
 	  }
 	  }
 	else {
-			setErrorFor(spousename, 'Spouse Name cannot be blank');
-			 return false;
+			setSuccessFor(spousename);
 		}
 		
-    if (spouseoccupationValue != "") 
+	if (spouseoccupationValue != "") 
 	  {
 			if (spouseoccupation.value.match(letters)){
 			setSuccessFor(spouseoccupation);			
 		}
 			else{
-			setErrorFor(spouseoccupation, 'Alphabet Characters only');	
-			 return false;
+			setErrorFor(spouseoccupation, 'Alphabet Characters only');
+			return false;			
 	  }
 	  }
 	else {
-			setErrorFor(spouseoccupation, 'Spouse Occupation cannot be blank');
-			 return false;
+			setSuccessFor(spouseoccupation);
 		}
 		
 	if (voterstatValue == "0") 
@@ -351,18 +350,16 @@ function myFunction1()
 		
 	if (emailValue != "") 
 	  {
-	  if(emailValue.match(alphanum)){
-		setSuccessFor(email);
-	  }
-		else{
-		setErrorFor(email,'Incorrect Email Format');
-		 return false;
-			}
+			if (email.value.match(alphanum)){
+			setSuccessFor(email);			
 		}
-	  
+			else{
+			setErrorFor(email, 'Incorrect Format');
+			return false;			
+	  }
+	  }
 	else {
-			setErrorFor(email, 'Email cannot be blank');
-			 return false;
+			setSuccessFor(email);
 		}
 
  	if (restypeValue == "0") 
@@ -384,8 +381,6 @@ function myFunction1()
 	  }
 
      }
-
-	
 	  
 function setErrorFor(input, message) {
 	var formControl = input.parentElement;

@@ -52,7 +52,7 @@ p{
 }
 
 .form-control {
-	position: relative;
+position: absolute;
   width:350px;
 }
 
