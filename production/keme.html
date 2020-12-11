@@ -8,28 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		    <link rel="stylesheet" href="css.css">
 			<script src="residentvalidation.js"></script>
-    <title>Resident Registration</title>
-<script type="text/javascript">
-    function EnableDisableTextBox(civilstat) {
-        var selectedValue = civilstat.options[civilstat.selectedIndex].value;
-        var spousename = document.getElementById("spousename");
-		var spouseoccupation = document.getElementById("spouseoccupation");
-        spousename.readOnly = selectedValue == "Married" ? false : true;
-		spouseoccupation.readOnly = selectedValue == "Married" ? false : true;
-        if (!spousename.readOnly && !spouseoccupation.readOnly ) {
-            spousename.focus();
-            spouseoccupation.focus();
-        }
-    }
-	
-	function check() {
-		var bod = birthdayValue.replace(/-/gi,"");
-if(document.getElementById('birthday').value < "20021211")
-    document.getElementById('voterstat').readOnly = false;
-else
-    document.getElementById('voterstat').readOnly = true;
-}
-</script>
+    <title>Registration</title>
+
 <style>
      .column {
   float: left;
@@ -180,7 +160,7 @@ else
                           <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="lastname" name="lastname" class="form-control col-md-7 col-xs-12" ><br>
+                              <input type="text" id="lastname" name="lastname" class="form-control col-md-7 col-xs-12"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -189,7 +169,7 @@ else
                           <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="firstname" name="firstname" class="form-control col-md-7 col-xs-12" ><br>
+                              <input type="text" id="firstname" name="firstname" class="form-control col-md-7 col-xs-12"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -198,7 +178,7 @@ else
                           <div class="form-group">
                             <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input id="middlename" name="middlename" class="form-control col-md-7 col-xs-12" type="text" > <br>
+                              <input id="middlename" name="middlename" class="form-control col-md-7 col-xs-12" type="text"> <br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -234,7 +214,7 @@ else
                           <div class="form-group">
                             <label for="birthplace" class="control-label col-md-3 col-sm-3 col-xs-12">Birth Place: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input id="birthplace" name="birthplace" class="form-control col-md-7 col-xs-12" type="text" onchange="check()"><br>
+                              <input id="birthplace" name="birthplace" class="form-control col-md-7 col-xs-12" type="text"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -251,14 +231,14 @@ else
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small> 
-                  </div>
-						    </div>
-              </div>
+                        </div>
+						</div>
+            </div>
             <div class="column">
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Civil Status: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 242px" id="civilstat" name="civilstat" class="form-control" onchange = "EnableDisableTextBox(this)">
+                          <select  style="width: 242px" id="civilstat" name="civilstat" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Single">Single</option>
                             <option value="Married">Married</option>
@@ -322,7 +302,7 @@ else
 						<div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Spouse's Name: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="spousename" name="spousename" class="form-control col-md-7 col-xs-12" readOnly="readOnly"><br>
+                              <input type="text" id="spousename" name="spousename" class="form-control col-md-7 col-xs-12"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -331,7 +311,7 @@ else
 						<div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Spouse's Occupation: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="spouseoccupation" name="spouseoccupation" class="form-control col-md-7 col-xs-12" readOnly="readOnly"><br>
+                              <input type="text" id="spouseoccupation" name="spouseoccupation" class="form-control col-md-7 col-xs-12"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -340,7 +320,7 @@ else
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Voter Status: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 242px" id="voterstat" name="voterstat" class="form-control" readOnly="readOnly">
+                          <select  style="width: 242px" id="voterstat" name="voterstat" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
