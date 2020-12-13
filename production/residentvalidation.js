@@ -37,7 +37,7 @@ function myFunction1()
 	
 	var letters = /^[A-Za-z ]+$/;
 	var address = /^[0-9A-Za-z .,]+$/;
-    var alphanum = /^([a-zA-Z@._0-9]+)$/;  	
+    var alphanum = /^([a-zA-Z@._0-9]+)$/; 	
 	
     if (lastnameValue != "") 
 	  {
@@ -298,7 +298,7 @@ function myFunction1()
 		}
 	  }
 	 else{
-		setErrorFor(homenum1, 'Numerical Characters only');	
+		setErrorFor(homenum1, 'Home Number cannot be blank');	
 		 return false;
 	  }
 	  
@@ -313,7 +313,7 @@ function myFunction1()
 		}
 	  }
 	 else{
-		setErrorFor(homenum2, 'Numerical Characters only');	
+		setErrorFor(homenum2, 'Home Number cannot be blank');	
 		 return false;
 	  }
 
@@ -328,7 +328,7 @@ function myFunction1()
 		}
 	  }
 	 else{
-		setErrorFor(mobnum1, 'Numerical Characters only');	
+		setErrorFor(mobnum1, 'Mobile Number cannot be blank');	
 		 return false;
 	  }
 	  
@@ -343,7 +343,7 @@ function myFunction1()
 		}
 	  }
 	 else{
-		setErrorFor(mobnum2, 'Numerical Characters only');	
+		setErrorFor(mobnum2, 'Mobile Number cannot be blank');	
 		 return false;
 	  }
 	  

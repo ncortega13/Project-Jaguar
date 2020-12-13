@@ -133,7 +133,7 @@
           <!-- top tiles -->
           <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Registered Residents</span>
+              <span class="count_top"><i class="fa fa-user"></i> Total Residents</span>
               <div class="count green">
 <?php
 $con=mysqli_connect("localhost", "root", "", "jaguar");
@@ -149,7 +149,7 @@ if ($result=mysqli_query($con,$sql))
   {
   // Return the number of rows in result set
   $rowcount=mysqli_num_rows($result);
-  printf("Result set has %d rows.\n",$rowcount);
+  printf($rowcount);
   // Free result set
   mysqli_free_result($result);
   }
@@ -160,18 +160,58 @@ mysqli_close($con);
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-              <div class="count">0</div>
+              <div class="count">
+<?php
+$con=mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM resident WHERE sex = 'Male'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+mysqli_close($con);
+?>
+			  </div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-              <div class="count">0</div>
+              <div class="count">
+<?php
+$con=mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM resident WHERE sex = 'Female'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+mysqli_close($con);
+?>			  
+			  </div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Voters</span>
-              <div class="count">0</div>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Residents</span>
               <div class="count">0</div>
             </div>
           </div>
@@ -312,24 +352,89 @@ mysqli_close($con);
 Male:  8,340
 Female:  6,894
 Voters:  12,756"
-                      style="background-color:#FFFFFF;color:#green ;text-decoration:none;font-size: 15px; margin-left: 70px">Purok 1 (Poblacion)</a>
+                      style="background-color:#FFFFFF;color:#green ;text-decoration:none;font-size: 15px; margin-left: 70px">Purok 1 (Zone I)</a>
                       <br><br>
+					  					  <div class="count"><center>
+<?php
+$con=mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM resident WHERE purok = '1'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+mysqli_close($con);
+?>
+					</center></div>
                     </div>
                     <hr>
                     <div>
-                      <p style="font-size: 15px; margin-left: 70px">Purok 2 (Zone I)</p>
+                      <p style="font-size: 15px; margin-left: 70px">Purok 2 (Zone II)</p>
                       <br>
+					  <div class="count"><center>
+<?php
+$con=mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM resident WHERE purok = '2'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+mysqli_close($con);
+?>
+					</center></div>
                     </div>
                     <hr>
                     <div>
-                      <p style="font-size: 15px; margin-left: 70px">Purok 3 (Zone II)</p>
+                      <p style="font-size: 15px; margin-left: 70px">Purok 3 (Zone III)</p>
                       <br>
+					  <div class="count"><center>
+<?php
+$con=mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM resident WHERE purok = '3'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+mysqli_close($con);
+?>
+					</center></div>
                     </div>
                     <hr>
-                    <div>
-                      <p style="font-size: 15px; margin-left: 70px">Purok 4 (Zone III)</p>
-                      <br>
-                    </div>
                     </div>
                   </div>
                   </div>
@@ -347,7 +452,7 @@ Voters:  12,756"
         </footer>
         <!-- /footer content -->
       </div>
-    </div>
+
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>

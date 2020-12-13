@@ -22,12 +22,11 @@
         }
     }
 	
-	function check() {
-		var bod = birthdayValue.replace(/-/gi,"");
-if(document.getElementById('birthday').value < "20021211")
-    document.getElementById('voterstat').readOnly = false;
+	function check(birthday) {
+if(document.getElementById('birthday').value < "20021212")
+    document.getElementById('voterstat').disabled = false;
 else
-    document.getElementById('voterstat').readOnly = true;
+    document.getElementById('voterstat').disabled = true;
 }
 </script>
 <style>
@@ -82,7 +81,7 @@ else
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.html"><i class="fa fa-desktop"></i>Dashboard</a>
+                  <li><a href="index.php"><i class="fa fa-desktop"></i>Dashboard</a>
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
@@ -225,7 +224,7 @@ else
                           <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input id="birthday" name="birthday"  class="date-picker form-control col-md-7 col-xs-12" type="date"><br>
+                              <input id="birthday" name="birthday"  class="date-picker form-control col-md-7 col-xs-12" type="date" onchange="check(this)"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -234,7 +233,7 @@ else
                           <div class="form-group">
                             <label for="birthplace" class="control-label col-md-3 col-sm-3 col-xs-12">Birth Place: </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input id="birthplace" name="birthplace" class="form-control col-md-7 col-xs-12" type="text" onchange="check()"><br>
+                              <input id="birthplace" name="birthplace" class="form-control col-md-7 col-xs-12" type="text"><br>
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
@@ -242,8 +241,8 @@ else
                           </div>
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Sex: </label>
-                        <div style="width: 263px" class="col-md-9 col-sm-9 col-xs-12">
-                          <select id="sex" name="sex" class="form-control">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select style="width: 242px" id="sex" name="sex" class="form-control">
                             <option value="0">Choose option</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -251,7 +250,7 @@ else
 							  	<i class="fas fa-check-circle"></i>
 								<i class="fas fa-exclamation-circle"></i>
 								<small>Error message</small> 
-                  </div>
+							</div>
 						    </div>
               </div>
             <div class="column">
@@ -337,11 +336,12 @@ else
 								<small>Error message</small>
                             </div>
                         </div>
+						          <!-- ito problema di pumapasok sa php-->
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Voter Status: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 242px" id="voterstat" name="voterstat" class="form-control" readOnly="readOnly">
-                            <option value="0">Choose option</option>
+                          <select  style="width: 242px" id="voterstat" name="voterstat" class="form-control" disabled="disabled">
+                            <option value="0" selected="selected">Choose option</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                           </select>
