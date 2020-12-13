@@ -399,35 +399,29 @@
 
         <!-- footer content-->
         <?php
-        require 'openDB_resident.php';
-        $db = mysqli_connect("localhost","root","","jaguar");
+          $connection = mysqli_connect("localhost","root","");
+          $db = mysqli_select_db($connection,'jaguar');
 
-        $resid = $_POST['resid'];
+          if(isset($_POST['search']))
+          {
+            $resid = $_POST['resid'];
 
-        if(isset($resid)){
+            $query = "SELECT * FROM resident WHERE resident_id='$resid' ";
+            $query_run = mysqli_query($connection,$query);
 
-          $query = mysql_query("SELECT * FROM resident WHERE resident_id = '$resid'") or die("Could not find resident");
-          $count = mysql_num_rows($query);
-          if($count == 0){
-            $output = 'Error';
-          }else{
-            while($row = mysql_fetch_array($query)){
-              $fname = $row['first_name'];
-              $lname = $row['last_name'];
-
-
-              $output .= '<div>'.'Name: '.$first_name.' '.$middle_name.' '.$last_name.'<br'.$sex.'</div>';
-
-              $output .= '<div>'.'Name: '.$first_name.' '.$middle_name.' '.$last_name.'<br>'.
-              $sex.'</div>';
-
+            while($row = mysqli_fetch_array($query_run))
+            {
+              ?>
+              <form action="" method="POST">
+                <input type="text" name="resident_id" value="<?php echo $row['resident_id']?>"/>
+                <input type="text" name="first_name" value="<?php echo $row['first_name']?>"/>
+                <input type="text" name="middle_name" value="<?php echo $row['middle_name']?>"/>
+                <input type="text" name="last_name" value="<?php echo $row['last_name']?>"/>
+                <input type="text" name="city_address"v alue="<?php echo $row['city_address']?>"/>
             }
           }
-        }
 
-
-
-
+          if(isset($_POST))
          ?>
         <div class=rcont>
             <form id="certification" action="chartjs.php" method="post">
@@ -437,12 +431,11 @@
                   <div class=login-container>
                   <h3>Input Resident ID</h3><br>
                   <input type="text" id="resid" name="resid" required><br><br><br>
-                  <center><button class="btn btn-success" onclick="return myFunction1()" id="register" name="register">Submit</button></center>
+                  <center><button id="search" name="search">Search</button></center>
                 </div>
                 </div>
                 </center>
             </form>
-<?php print("output");?>
           </div>
         <footer>
           <div class="pull-right">
