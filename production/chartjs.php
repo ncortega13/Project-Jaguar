@@ -429,7 +429,7 @@
              <center>
               <form action="certification.php" method="POST">
               <input type="text" name="last_name" value="<?php echo $row['last_name']; ?>"/><br><br>
-              <input type="text" name="first_name "value="<?php echo $row['first_name']; ?>"/><br><br>
+              <input type="text" name="first_name" value="<?php echo $row['first_name']; ?>"/><br><br>
               <input type="text" name="middle_name" value="<?php echo $row['middle_name']; ?>"/><br><br>
               <input type="text" name="city_address" value="<?php echo $row['city_address']; ?>"/><br><br>
               <button id="generate" name="generate">Generate Certificate</button>
