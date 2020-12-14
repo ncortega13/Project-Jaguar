@@ -24,6 +24,7 @@ function myFunction1()
 	var spousenameValue = document.getElementById("spousename").value;
 	var spouseoccupationValue = document.getElementById("spouseoccupation").value;
 	var voterstatValue = document.getElementById("voterstat").value;
+	var activeinactiveValue = document.getElementById("activeinactive").value;
 	var cityaddValue = document.getElementById("cityadd").value;
 	var provaddValue = document.getElementById("provadd").value;
 	var purokValue = document.getElementById("purok").value;
@@ -238,15 +239,36 @@ function myFunction1()
 			setSuccessFor(spouseoccupation);
 		}
 		
-	if (voterstatValue == "0") 
+	if (voterstat.disabled == false) 
 	  {
+		  if (voterstatValue == "0"){
 			setErrorFor(voterstat, 'Voter Status cannot be blank');	
 			return false;			
 		}
 	else{
 			setSuccessFor(voterstat);	
 	  }
-	  
+	  }
+	 else
+	 {
+		setSuccessFor(voterstat);	
+	 }
+	 
+	if (activeinactive.style.display == 'block') 
+	  {
+		  if (activeinactiveValue == "0"){
+			setErrorFor(activeinactive, 'Voter Status cannot be blank');	
+			return false;			
+		}
+	else{
+			setSuccessFor(activeinactive);	
+	  }
+	  }
+	 else
+	 {
+		setSuccessFor(activeinactive);	
+	 }
+	 
     if (cityaddValue != "") 
 	  {
 			if (cityadd.value.match(address)){
