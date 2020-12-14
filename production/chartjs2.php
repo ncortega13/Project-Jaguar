@@ -400,9 +400,9 @@
         <!-- footer content-->
 
         <div class=rcont>
-            <form id="certification" action="chartjs.php" method="post">
+            <form id="certification" action="chartjs2.php" method="post">
                 <center>
-                <h1>Certifcate of Residency</h1>
+                <h1>Barangay Clearance</h1>
                 <div><br><br>
                   <div class=login-container>
                   <h3>Input Resident ID</h3><br>
@@ -427,11 +427,12 @@
            {
              ?>
              <center>
-              <form action="certification.php" method="POST">
+              <form action="clearance.php" method="POST">
               <input type="text" name="last_name" value="<?php echo $row['last_name']; ?>"/><br><br>
               <input type="text" name="first_name "value="<?php echo $row['first_name']; ?>"/><br><br>
               <input type="text" name="middle_name" value="<?php echo $row['middle_name']; ?>"/><br><br>
               <input type="text" name="city_address" value="<?php echo $row['city_address']; ?>"/><br><br>
+              <input type="text" id="purpose" name="purpose" placeholder="State Purpose"/><br><br>
               <button id="generate" name="generate">Generate Certificate</button>
               </center>
              <?php

@@ -128,10 +128,10 @@ function printDiv() {
   </head>
   <body>
     <?php
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $mname = $_POST['mname'];
-    $address = $_POST['address'];
+    $fname = $_POST['first_name'];
+    $lname = $_POST['last_name'];
+    $mname = $_POST['middle_name'];
+    $address = $_POST['city_address'];
     $date = $_POST['date'];
     $purpose = $_POST['purpose'];
 
