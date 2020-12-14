@@ -175,15 +175,15 @@ $mysqli -> close();
                   <br><br>
                     <div class="row">
                       <div class="column">
-                  <p style="margin-left: 100px"><b>Resident ID</b><?php echo $fieldinfo['resident_id']; ?></p>
-                  <p style="margin-left: 100px"><b>Last Name</b><?php echo $fieldinfo['last_name']; ?></p>
+                  <p style="margin-left: 100px"><b>Resident ID</b></p>
+                  <p style="margin-left: 100px"><b>Last Name</b>
                   <p style="margin-left: 100px"><b>First Name</b></p>
-                  <p style="margin-left: 100px"><b>Middle Name / Initial</b><?php echo $fieldinfo['first_name']; ?></p>
-                  <p style="margin-left: 100px"><b>Alias</b><?php echo $fieldinfo['middle_name']; ?></p>
-                  <p style="margin-left: 100px"><b>Face Marks</b><?php echo $fieldinfo['alias']; ?></p>
-                  <p style="margin-left: 100px"><b>Date of Birth</b><?php echo $fieldinfo['face_marks']; ?></p>
-                  <p style="margin-left: 100px"><b>Birth Place</b><?php echo $fieldinfo['birth_date']; ?></p>
-                  <p style="margin-left: 100px"><b>Sex</b><?php echo $fieldinfo['birth_place']; ?></p>
+                  <p style="margin-left: 100px"><b>Middle Name / Initial</b></p>
+                  <p style="margin-left: 100px"><b>Alias</b></p>
+                  <p style="margin-left: 100px"><b>Face Marks</b></p>
+                  <p style="margin-left: 100px"><b>Date of Birth</b></p>
+                  <p style="margin-left: 100px"><b>Birth Place</b></p>
+                  <p style="margin-left: 100px"><b>Sex</b></p>
                       </div>
                       <div class="column">
                   <br>
@@ -220,9 +220,12 @@ $mysqli -> close();
                     <div class="row">
                       <div class="column">
                   <p style="margin-left: 100px"><b>Resident Type</b></p>
+                  <p style="margin-left: 100px"><b>Date & Time Registered</b></p>
+                  <p style="margin-left: 100px"><b>Transaction ID</b></p>
                       </div>
                       <div class="column">
                   <p style="margin-left: 100px"><b>Resident Status</b></p>
+                  <p style="margin-left: 100px"><b>Processed by</b></p>
                       </div>
                     </div>
                     <br>
@@ -232,9 +235,6 @@ $mysqli -> close();
 
 
 
-                  </div>
-                </div>
-              </div>		
                   </div>
                 </div>
               </div>
@@ -254,6 +254,11 @@ $mysqli -> close();
       </div>
     </div>
 
+    
+    </div>
+                  </div>
+                </div>
+              </div>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->

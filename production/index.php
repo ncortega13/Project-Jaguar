@@ -235,8 +235,57 @@ if ($result=mysqli_query($con,$sql))
 mysqli_close($con);
 ?>	</div>
             </div>
+<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Minors</span>
+              <div class="count">
+<?php
+$con=mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM resident WHERE birth_date > '12-15-2002'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+mysqli_close($con);
+?>  </div>
+            </div>
+
+<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Current Residents</span>
+              <div class="count">
+<?php
+$con=mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM resident WHERE resident_status = 'Active'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }?>
+</div></div>
           </div>
           <!-- /top tiles -->
+
 
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -253,9 +302,9 @@ mysqli_close($con);
                           <tr class="headings">
                             <th class="column-title">Last Name </th>
                             <th class="column-title">First Name </th>
-                            <th class="column-title">Middle Name </th>
+                            <th class="column-title">Middle Initial </th>
                             <th class="column-title">Position </th>
-                            <th class="column-title">Address </th>
+                            <th class="column-title">Purok </th>
                             <th class="column-title no-link last"><span class="nobr">Action</span>
                             </th>
                             <th class="bulk-actions" colspan="7">
@@ -268,94 +317,94 @@ mysqli_close($con);
                             <td class=" ">Abrenica</td>
                             <td class=" ">Fortunato</i></td>
                             <td class=" ">L</td>
-                            <td class=" ">Mayor</td>
-                            <td class="a-right a-right ">Villasis, Pangasinan</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">Captain</td>
+                            <td class="a-right a-right ">1</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                           <tr class="odd pointer">
                             <td class=" ">Robredo</td>
-                            <td class=" ">Leni<i class="success fa fa-long-arrow-up"></i>
+                            <td class=" ">Leni</i>
                             </td>
                             <td class=" ">K</td>
-                            <td class=" ">Vice Mayor</td>
-                            <td class="a-right a-right ">Naga, Camarines Norte</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">Kagawad</td>
+                            <td class="a-right a-right ">2</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                           <tr class="even pointer">
-                            <td class=" ">May 24, 2014 10:55:33 PM</td>
-                            <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
+                            <td class=" ">Mortera</td>
+                            <td class=" ">Darryl Edison
                             </td>
-                            <td class=" ">Mike Smith</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">$432.26</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">B</td>
+                            <td class=" ">Kagawad</td>
+                            <td class="a-right a-right ">1</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                           <tr class="odd pointer">
-                            <td class=" ">May 24, 2014 10:52:44 PM</td>
-                            <td class=" ">121000204</td>
-                            <td class=" ">Mike Smith</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">$333.21</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">Villa</td>
+                            <td class=" ">Conrado</td>
+                            <td class=" ">T</td>
+                            <td class=" ">Kagawad</td>
+                            <td class="a-right a-right ">1</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                           <tr class="even pointer">
-                            <td class=" ">May 24, 2014 11:47:56 PM </td>
-                            <td class=" ">121000210</td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">$7.45</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">Sakay</td>
+                            <td class=" ">Daniel</td>
+                            <td class=" ">C</td>
+                            <td class=" ">Kagawad</td>
+                            <td class="a-right a-right ">3</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                           <tr class="odd pointer">
-                            <td class=" ">May 26, 2014 11:30:12 PM</td>
-                            <td class=" ">121000208 <i class="error fa fa-long-arrow-down"></i>
+                            <td class=" ">Ortega</td>
+                            <td class=" ">Nicolle Clarisse
                             </td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">$741.20</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">S</td>
+                            <td class=" ">Kagawad</td>
+                            <td class="a-right a-right ">2</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                           <tr class="even pointer">
-                            <td class=" ">May 26, 2014 10:55:33 PM</td>
-                            <td class=" ">121000203</td>
-                            <td class=" ">Mike Smith</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">$432.26</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">Olidan</td>
+                            <td class=" ">Marko</td>
+                            <td class=" ">L</td>
+                            <td class=" ">Kagawad</td>
+                            <td class="a-right a-right ">3</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                           <tr class="odd pointer">
-                            <td class=" ">May 26, 2014 10:52:44 PM</td>
-                            <td class=" ">121000204</td>
-                            <td class=" ">Mike Smith</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">$333.21</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">Dela Cruz</td>
+                            <td class=" ">Juan</td>
+                            <td class=" ">S</td>
+                            <td class=" ">Kagawad</td>
+                            <td class="a-right a-right ">1</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
 
                           <tr class="even pointer">
-                            <td class=" ">May 27, 2014 11:47:56 PM </td>
-                            <td class=" ">121000210</td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">$7.45</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">Obejo</td>
+                            <td class=" ">Clark</td>
+                            <td class=" ">M</td>
+                            <td class=" ">SK Chairman</td>
+                            <td class="a-right a-right ">1</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                           <tr class="odd pointer">
-                            <td class=" ">May 28, 2014 11:30:12 PM</td>
-                            <td class=" ">121000208</td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">$741.20</td>
-                            <td class=" last"><a href="#">View</a>
+                            <td class=" ">Marzan</td>
+                            <td class=" ">Jeraldine</td>
+                            <td class=" ">M</td>
+                            <td class=" ">Secretary</td>
+                            <td class="a-right a-right ">2</td>
+                            <td class=" last"><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                             </td>
                           </tr>
                         </tbody>
@@ -372,7 +421,7 @@ mysqli_close($con);
                   </div>
                     
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <div class="col-md-4 col-sm-4 col-xs-12 tile_stats_count">
                       <p style="font-size: 15px"><b>Purok 1 (Zone I)</b></p>
                       
                       <br>
@@ -430,7 +479,7 @@ mysqli_close($con);
           </div>
                     </div>
                     <div class="clearfix">
-                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                    <div class="col-md-4 col-sm-4 col-xs-12 tile_stats_count">
                       <p style="font-size: 15px"><b>Purok 2 (Zone II)</b></p>
                       <br>
             <div class="count">
@@ -485,7 +534,7 @@ mysqli_close($con);
 ?>          </div>
                     </div>
                     <div class="clearfix">
-                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                    <div class="col-md-4 col-sm-4 col-xs-12 tile_stats_count">
                       <p style="font-size: 15px"><b>Purok 3 (Poblacion)</b></p>
                       <br>
             <div class="count">
