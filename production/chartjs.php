@@ -143,7 +143,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.html"><i class="fa fa-desktop"></i>Dashboard</a>
+                  <li><a href="index.php"><i class="fa fa-desktop"></i>Dashboard</a>
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
@@ -195,223 +195,29 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
-        <!-- top navigation-->
 
-        <!-- page content
+        <!-- page content -->		
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Chart Js <small>Some examples to get you started</small></h3>
-              </div>
-
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                  </div>
-                </div>
+                <h1>Certificate of Residency</h1>
               </div>
             </div>
-
-            <div class="clearfix"></div>
-
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Line graph<small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <canvas id="lineChart"></canvas>
-                  </div>
+			      <form id="certification" action="chartjs.php" method="post">  
+                <div><br><br><br>
+					<center><h3>Input Resident ID</h3><br></center>
+                        <center><input type="text" id="id" name="id" class="form-control" style="width:500px"><br></center>
+                  <center><button id="search" name="search" class="btn btn-success">Search</button></center>
                 </div>
-              </div>
-
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Bar graph <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <canvas id="mybarChart"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Radar <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <canvas id="canvasRadar"></canvas>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Donut Graph <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <canvas id="canvasDoughnut"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Pie Graph Chart <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <canvas id="pieChart"></canvas>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Pie Area Graph <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <canvas id="polarArea"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- page content -->
-
-        <!-- footer content-->
-
-        <div class=rcont>
-            <form id="certification" action="chartjs.php" method="post">
-                <center>
-                <h1>Certifcate of Residency</h1>
-                <div><br><br>
-                  <div class=login-container>
-                  <h3>Input Resident ID</h3><br>
-                  <input type="text" id="id" name="id" required><br><br><br>
-                  <center><button id="search" name="search">Search</button></center>
-                </div>
-                </div>
-                </center>
-            </form>
+            </form><br><br>
             <?php
          $connection = mysqli_connect("localhost","root","");
          $db = mysqli_select_db($connection,'jaguar');
@@ -428,11 +234,11 @@
              ?>
              <center>
               <form action="certification.php" method="POST">
-              <input type="text" name="last_name" value="<?php echo $row['last_name']; ?>"/><br><br>
-              <input type="text" name="first_name" value="<?php echo $row['first_name']; ?>"/><br><br>
-              <input type="text" name="middle_name" value="<?php echo $row['middle_name']; ?>"/><br><br>
-              <input type="text" name="city_address" value="<?php echo $row['city_address']; ?>"/><br><br>
-              <button id="generate" name="generate">Generate Certificate</button>
+              <input type="text" name="last_name"  class="form-control" style="width:500px" value="<?php echo $row['last_name']; ?>"/><br><br>
+              <input type="text" name="first_name" class="form-control" style="width:500px" value="<?php echo $row['first_name']; ?>"/><br><br>
+              <input type="text" name="middle_name" class="form-control" style="width:500px" value="<?php echo $row['middle_name']; ?>"/><br><br>
+              <input type="text" name="city_address" class="form-control" style="width:500px" value="<?php echo $row['city_address']; ?>"/><br><br>
+              <button id="generate" class="btn btn-success" name="generate">Generate Certificate</button>
               </center>
              <?php
            }
@@ -440,6 +246,7 @@
          }
         ?>
           </div>
+		  </div>
         <footer>
           <div class="pull-right">
             BARANGGAY XYZ INFORMATION SYSTEM MANAGEMENT</a>
@@ -457,11 +264,11 @@
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
+	
+
 
   </body>
 </html>

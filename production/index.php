@@ -212,7 +212,28 @@ mysqli_close($con);
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Voters</span>
-              <div class="count">0</div>
+              <div class="count">
+<?php
+$con=mysqli_connect("localhost", "root", "", "jaguar");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM resident WHERE voter_status = 'Yes'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+mysqli_close($con);
+?>	</div>
             </div>
           </div>
           <!-- /top tiles -->
