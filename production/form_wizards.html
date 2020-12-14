@@ -28,6 +28,14 @@ if(document.getElementById('birthday').value < "20021212")
 else
     document.getElementById('voterstat').disabled = true;
 }
+
+function checkvalue(voterstat)
+{
+    if(voterstat == "Yes")
+       document.getElementById('activeinactive').style.display='block';
+    else
+       document.getElementById('activeinactive').style.display='none'; 
+}
 </script>
 <style>
      .column {
@@ -261,6 +269,7 @@ else
                             <option value="0">Choose option</option>
                             <option value="Single">Single</option>
                             <option value="Married">Married</option>
+                            <option value="Separated">Separated</option>
                             <option value="Widowed">Widowed</option>
                           </select>
 							  	<i class="fas fa-check-circle"></i>
@@ -336,11 +345,11 @@ else
 								<small>Error message</small>
                             </div>
                         </div>
-						          <!-- ito problema di pumapasok sa php-->
+
 						<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Voter Status: </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <select  style="width: 242px" id="voterstat" name="voterstat" class="form-control" disabled="disabled">
+                          <select  style="width: 242px" id="voterstat" name="voterstat" class="form-control" disabled="disabled" onchange='checkvalue(this.value)'>
                             <option value="0" selected="selected">Choose option</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
@@ -349,10 +358,23 @@ else
 							<i class="fas fa-exclamation-circle"></i>
 							<small>Error message</small>
                         </div>
-						</div>						
+						</div>
+						<div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select style='display:none' style="width: 242px" id="activeinactive" name="activeinactive" class="form-control" >
+                            <option value="0" selected="selected">Choose option</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                          </select>
+							<i class="fas fa-check-circle"></i>
+							<i class="fas fa-exclamation-circle"></i>
+							<small>Error message</small>
+                        </div>
+						</div>					
+
 					   
             </div>
-              </div>
+            </div>
                       
 
                         <h2 class="StepTitle">Contact Information</h2>
