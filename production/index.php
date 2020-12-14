@@ -216,18 +216,17 @@ mysqli_close($con);
             </div>
           </div>
           <!-- /top tiles -->
-<br><br>
+
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="dashboard_graph">
 
                 <div class="row x_title">
-                  <div class="col-md-12 col-sm-12 col-xs-12 bg-white">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
                     <h3 style="font-size: 30px"><strong>CURRENT BARANGGAY OFFICIALS</strong></h3>
-                    <hr>
                   </div>
-                <br>
-                <div class="col-md-9 col-sm-9 col-xs-12 bg-white">
+
+                  </div>
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
@@ -341,20 +340,23 @@ mysqli_close($con);
                         </tbody>
                       </table>
                   </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 bg-grey">
-                  <div class="x_title">
-                    <h2 style="font-size: 30px; margin-left: 20px"><strong>PUROK</strong></h2>
-                    <div class="clearfix"></div>
                   </div>
-                    <div>
+                </div>
+                <br>
+
+                <div class="col-md-12 col-sm-12 col-xs-12 bg-white">
+                  <div class="x_title">
+                    <h2 style="font-size: 30px; margin-top: 10px"><strong>PUROK</strong></h2>
+                    <div class="clearfix">
+                  </div>
+                    
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                      <p style="font-size: 15px"><b>Purok 1 (Zone I)</b></p>
+                      
                       <br>
-                      <a href=" " title="Residents:  15,234
-Male:  8,340
-Female:  6,894
-Voters:  12,756"
-                      style="background-color:#FFFFFF;color:#green ;text-decoration:none;font-size: 15px; margin-left: 70px">Purok 1 (Zone I)</a>
-                      <br><br>
-					  					  <div class="count"><center>
+                        <div class="count">
+
 <?php
 $con=mysqli_connect("localhost", "root", "", "jaguar");
 // Check connection
@@ -369,6 +371,34 @@ if ($result=mysqli_query($con,$sql))
   {
   // Return the number of rows in result set
   $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Resident:</p>";
+  printf($rowcount);
+  // Free result set
+
+  mysqli_free_result($result);
+  }
+
+
+  $sql="SELECT * FROM resident WHERE sex = 'male' and purok = '1'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Male: </p>";
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+
+  $sql="SELECT * FROM resident WHERE sex = 'female' and purok = '1'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Female: </p>";
   printf($rowcount);
   // Free result set
   mysqli_free_result($result);
@@ -376,13 +406,13 @@ if ($result=mysqli_query($con,$sql))
 
 mysqli_close($con);
 ?>
-					</center></div>
+          </div>
                     </div>
-                    <hr>
-                    <div>
-                      <p style="font-size: 15px; margin-left: 70px">Purok 2 (Zone II)</p>
+                    <div class="clearfix">
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                      <p style="font-size: 15px"><b>Purok 2 (Zone II)</b></p>
                       <br>
-					  <div class="count"><center>
+            <div class="count">
 <?php
 $con=mysqli_connect("localhost", "root", "", "jaguar");
 // Check connection
@@ -397,20 +427,47 @@ if ($result=mysqli_query($con,$sql))
   {
   // Return the number of rows in result set
   $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Resident: </p>";
+  printf($rowcount);
+  // Free result set
+
+  mysqli_free_result($result);
+  }
+
+
+  $sql="SELECT * FROM resident WHERE sex = 'male' and purok = '2' ";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Male: </p>";
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+
+  $sql="SELECT * FROM resident WHERE sex = 'female' and purok = '2'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Female: </p>";
   printf($rowcount);
   // Free result set
   mysqli_free_result($result);
   }
 
 mysqli_close($con);
-?>
-					</center></div>
+?>          </div>
                     </div>
-                    <hr>
-                    <div>
-                      <p style="font-size: 15px; margin-left: 70px">Purok 3 (Zone III)</p>
+                    <div class="clearfix">
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                      <p style="font-size: 15px"><b>Purok 3 (Poblacion)</b></p>
                       <br>
-					  <div class="count"><center>
+            <div class="count">
 <?php
 $con=mysqli_connect("localhost", "root", "", "jaguar");
 // Check connection
@@ -425,21 +482,44 @@ if ($result=mysqli_query($con,$sql))
   {
   // Return the number of rows in result set
   $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Resident: </p>";
+  printf($rowcount);
+  // Free result set
+
+  mysqli_free_result($result);
+  }
+
+
+  $sql="SELECT * FROM resident WHERE sex = 'male' and purok = '3' ";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Male: </p>";
+  printf($rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+
+  $sql="SELECT * FROM resident WHERE sex = 'female' and purok = '3'";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  echo "<p>Total Female: </p>";
   printf($rowcount);
   // Free result set
   mysqli_free_result($result);
   }
 
 mysqli_close($con);
-?>
-					</center></div>
+?></div>
                     </div>
-                    <hr>
+
                     </div>
-                  </div>
-                  </div>
-                </div>
-            </div>
           </div>
           </div>
           </div>

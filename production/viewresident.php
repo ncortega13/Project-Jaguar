@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="images/imgal.jpg">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Residents Information</title>
+    <title> View Residents Information</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,16 +27,25 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <style>
+     .column {
+  float: left;
+  width: 50%;
+  }
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+</style>
   </head>
 
-  <body class="nav-md">
+ <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-
-              <a class="site_title"><img src="images/imga.jpg"width="50" height="50" style="border-radius: 55px"> <span>Baranggay XYZ</span></a>
+              <a class="site_title"><img src="images/imga.jpg"width="50" height="50" style="border-radius: 55px"> <span>Barangay XYZ</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -59,7 +69,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.php"><i class="fa fa-desktop"></i>Dashboard</a>
+                  <li><a href="index.html"><i class="fa fa-desktop"></i>Dashboard</a>
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
@@ -125,70 +135,118 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Resident Information Management </h3>
+                <h3>View Residents Information</h3>
               </div>
             </div>
 
             <div class="clearfix"></div>
 
-              <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="col-md-12 col-sm-12 col-xs-12 ">
+                
                 <div class="x_panel">
-                  <div class="x_content">
-                    <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action">
-                      <thead>
-                        <tr>
-						<td>
-							Action
-                          <th>Resident ID</th>
-                          <th>Last Name</th>
-                          <th>First Name</th>
-                          <th>Middle Name</th>
-                          <th>Sex</th>
-						  <th>Purok</th>
+                  <div class="x_title">
+                    <h2>View Resident</h2>
+                    
+                    <div class="clearfix"></div>
+                  </div>
 
-						 </td>
-                        </tr>
-                      </thead>
 <?php
-$conn = mysqli_connect("localhost", "root", "", "jaguar");
-// Check connection
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
+$mysqli = new mysqli("localhost","root","","jaguar");
+
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
 }
-$sql = "SELECT resident_id, last_name, first_name, middle_name, sex, purok FROM resident";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-// output data of each row
-while($row = $result->fetch_assoc()) {
-echo "<tr>" . 
-'<td><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a><a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>' .
-"<td>" . $row["resident_id"] . "</td>". 
-"<td>" . $row["last_name"] . "</td>" . 
-"<td>" . $row["first_name"] . "</td>" . 
-"<td>" . $row["middle_name"] . "</td>" .
-"<td>" . $row["sex"] . "</td>" . 
-"<td>" . $row["purok"] . "</td>". 
-"</tr>" ;
+
+$sql = "SELECT * FROM resident";
+
+if ($result = $mysqli -> query($sql)) {
+  // Get field information for all fields
+  while ($fieldinfo = $result -> fetch_field()) {
+
+  }
+  $result -> free_result();
 }
-echo "</table>";
-} else { echo "0 results"; }
-$conn->close();
-?>				  
-                    </table>
+
+$mysqli -> close();
+?>
+          <div class="x_content">
+                  <h2 class="StepTitle">Personal Information</h2>
+                  <br><br>
+                    <div class="row">
+                      <div class="column">
+                  <p style="margin-left: 100px"><b>Resident ID</b><?php echo $fieldinfo['resident_id']; ?></p>
+                  <p style="margin-left: 100px"><b>Last Name</b><?php echo $fieldinfo['last_name']; ?></p>
+                  <p style="margin-left: 100px"><b>First Name</b></p>
+                  <p style="margin-left: 100px"><b>Middle Name / Initial</b><?php echo $fieldinfo['first_name']; ?></p>
+                  <p style="margin-left: 100px"><b>Alias</b><?php echo $fieldinfo['middle_name']; ?></p>
+                  <p style="margin-left: 100px"><b>Face Marks</b><?php echo $fieldinfo['alias']; ?></p>
+                  <p style="margin-left: 100px"><b>Date of Birth</b><?php echo $fieldinfo['face_marks']; ?></p>
+                  <p style="margin-left: 100px"><b>Birth Place</b><?php echo $fieldinfo['birth_date']; ?></p>
+                  <p style="margin-left: 100px"><b>Sex</b><?php echo $fieldinfo['birth_place']; ?></p>
+                      </div>
+                      <div class="column">
+                  <br>
+                  <p style="margin-left: 100px"><b>Civil Status</b></p>
+                  <p style="margin-left: 100px"><b>Nationality</b></p>
+                  <p style="margin-left: 100px"><b>Religion / Belief</b></p>
+                  <p style="margin-left: 100px"><b>Occupation</b></p>
+                  <p style="margin-left: 100px"><b>Sector</b></p>
+                  <p style="margin-left: 100px"><b>Spouse's Name</b></p>
+                  <p style="margin-left: 100px"><b>Spouse's Occupation</b></p>
+                  <p style="margin-left: 100px"><b>Voter Status</b></p>
+                      </div>
+                    </div>
+                    <br>
+                    <h2 class="StepTitle">Contact Information</h2>
+                  <br>
+                    <div class="row">
+                      <div class="column">
+                  <p style="margin-left: 100px"><b>City Address</b></p>
+                  <p style="margin-left: 100px"><b>Provincial Address</b></p>
+                  <p style="margin-left: 100px"><b>Purok</b></p>
+                  <p style="margin-left: 100px"><b>Home Number 1</b></p>
+                      </div>
+                      <div class="column">
+                  <p style="margin-left: 100px"><b>Home Number 2</b></p>
+                  <p style="margin-left: 100px"><b>Mobile Number 1</b></p>
+                  <p style="margin-left: 100px"><b>Mobile Number 2</b></p>
+                  <p style="margin-left: 100px"><b>Email Address</b></p>
+                      </div>
+                    </div>
+                    <br>
+                    <h2 class="StepTitle">Registration Details</h2>
+                  <br>
+                    <div class="row">
+                      <div class="column">
+                  <p style="margin-left: 100px"><b>Resident Type</b></p>
+                      </div>
+                      <div class="column">
+                  <p style="margin-left: 100px"><b>Resident Status</b></p>
+                      </div>
+                    </div>
+                    <br>
+
+                    <center><td><a href="residents.php" class="btn btn-primary"><i class="fa fa-chevron-left"></i> Back </a></td></center>
+
+
+
+
                   </div>
                 </div>
               </div>		
                   </div>
                 </div>
-
-
-
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- /page content -->
 
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            BARANGGAY XYZ INFORMATION SYSTEM MANAGEMENT</a>
+            BARANGAY XYZ INFORMATION SYSTEM MANAGEMENT</a>
           </div>
           <div class="clearfix"></div>
         </footer>
