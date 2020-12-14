@@ -34,6 +34,7 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link rel="icon" href="images/imgal.jpg">
   </head>
 
   <body class="nav-md">
@@ -43,7 +44,7 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
 
-              <a class="site_title"><img src="images/imga.jpg"width="50" height="50" style="border-radius: 55px"> <span>Baranggay XYZ</span></a>
+              <a class="site_title"><img src="images/imga.jpg"width="50" height="50" style="border-radius: 55px"> <span>Barangay XYZ</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -76,7 +77,7 @@
                   <li><a><i class="fa fa-certificate"></i>Certificate Issuance <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="chartjs.php">Certificate of Residency</a></li>
-                      <li><a href="chartjs2.php">Baranggay Clearance</a></li>
+                      <li><a href="chartjs2.php">Barangay Clearance</a></li>
 
                     </ul>
                   </li>
@@ -293,7 +294,7 @@ if ($result=mysqli_query($con,$sql))
 
                 <div class="row x_title">
                   <div class="col-md-12 col-sm-12 col-xs-12">
-                    <h3 style="font-size: 30px"><strong>CURRENT BARANGGAY OFFICIALS</strong></h3>
+                    <h3 style="font-size: 30px"><strong>CURRENT BARANGAY OFFICIALS</strong></h3>
                   </div>
 
                   </div>
@@ -596,7 +597,7 @@ mysqli_close($con);
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            BARANGGAY XYZ INFORMATION SYSTEM MANAGEMENT</a>
+            BARANGAY XYZ INFORMATION SYSTEM MANAGEMENT</a>
           </div>
           <div class="clearfix"></div>
         </footer>

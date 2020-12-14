@@ -27,6 +27,7 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link rel="icon" href="images/imgal.jpg">
     <style>
      .column {
   float: left;
@@ -78,7 +79,7 @@
                   <li><a><i class="fa fa-certificate"></i>Certificate Issuance <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="chartjs.php">Certificate of Residency</a></li>
-                      <li><a href="chartjs2.html">Baranggay Clearance</a></li>
+                      <li><a href="chartjs2.html">Barangay Clearance</a></li>
 
                     </ul>
                   </li>
