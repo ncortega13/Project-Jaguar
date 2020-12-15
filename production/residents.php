@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Residents Information</title>
+    <title>Residents Information | BIMS</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="images/imgal.jpg">
+    <link rel="icon" href="images/seal.jpg">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
 
-              <a class="site_title"><img src="images/imga.jpg"width="50" height="50" style="border-radius: 55px"> <span>Barangay XYZ</span></a>
+              <a class="site_title"><img src="images/seal.jpg"width="50" height="50"> <span>Barangay XYZ</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -60,7 +60,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.php"><i class="fa fa-desktop"></i>Dashboard</a>
+                  <li><a href="dashboard.php"><i class="fa fa-desktop"></i>Dashboard</a>
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
@@ -90,7 +90,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="index.html">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -112,7 +112,7 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>
@@ -162,7 +162,7 @@ if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr>" . 
-'<td><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a><a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>' .
+'<td><a href="viewresident.php" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a><a href="edit.html" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a><a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>' .
 "<td>" . $row["resident_id"] . "</td>". 
 "<td>" . $row["last_name"] . "</td>" . 
 "<td>" . $row["first_name"] . "</td>" . 

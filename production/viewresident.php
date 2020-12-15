@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> View Residents Information</title>
+    <title>View Residents Information | BIMS</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-    <link rel="icon" href="images/imgal.jpg">
+    <link rel="icon" href="images/seal.jpg">
     <style>
      .column {
   float: left;
@@ -46,7 +46,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a class="site_title"><img src="images/imga.jpg"width="50" height="50" style="border-radius: 55px"> <span>Barangay XYZ</span></a>
+              <a class="site_title"><img src="images/seal.jpg"width="50" height="50"> <span>Barangay XYZ</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -70,7 +70,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.html"><i class="fa fa-desktop"></i>Dashboard</a>
+                  <li><a href="dashboard.php"><i class="fa fa-desktop"></i>Dashboard</a>
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
@@ -79,7 +79,7 @@
                   <li><a><i class="fa fa-certificate"></i>Certificate Issuance <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="chartjs.php">Certificate of Residency</a></li>
-                      <li><a href="chartjs2.html">Barangay Clearance</a></li>
+                      <li><a href="chartjs2.php">Barangay Clearance</a></li>
 
                     </ul>
                   </li>
@@ -100,7 +100,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="index.html">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -122,7 +122,7 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>

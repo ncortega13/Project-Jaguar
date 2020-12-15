@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dashboard</title>
+    <title>Dashboard | BIMS</title>
 
     <style>
     p{
@@ -34,7 +34,7 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-    <link rel="icon" href="images/imgal.jpg">
+    <link rel="icon" href="images/seal.jpg">
   </head>
 
   <body class="nav-md">
@@ -44,7 +44,7 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
 
-              <a class="site_title"><img src="images/imga.jpg"width="50" height="50" style="border-radius: 55px"> <span>Barangay XYZ</span></a>
+              <a class="site_title"><img src="images/seal.jpg"width="50" height="50"> <span>Barangay XYZ</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -68,7 +68,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.php"><i class="fa fa-desktop"></i>Dashboard</a>
+                  <li><a href="dashboard.php"><i class="fa fa-desktop"></i>Dashboard</a>
                   </li>
                   <li><a href="form_wizards.html"><i class="fa fa-edit"></i> Registration</a>
                   </li>
@@ -98,7 +98,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="index.html">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -120,13 +120,14 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
+      </div>
         <!-- /top navigation -->
 
         <!-- page content -->
@@ -263,7 +264,7 @@ mysqli_close($con);
             </div>
 
 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Current Residents</span>
+              <span class="count_top"><i class="fa fa-user"></i> Total Active Residents</span>
               <div class="count">
 <?php
 $con=mysqli_connect("localhost", "root", "", "jaguar");
@@ -415,7 +416,7 @@ if ($result=mysqli_query($con,$sql))
                 </div>
                 <br>
 
-                <div class="col-md-12 col-sm-12 col-xs-12 bg-white">
+                <div class="col-md-15 col-sm-15 col-xs-12 bg-white">
                   <div class="x_title">
                     <h2 style="font-size: 30px; margin-top: 10px"><strong>PUROK</strong></h2>
                     <div class="clearfix">
@@ -588,6 +589,7 @@ if ($result=mysqli_query($con,$sql))
 
 mysqli_close($con);
 ?></div>
+
                     </div>
 
                     </div>
