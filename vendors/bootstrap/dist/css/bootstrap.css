@@ -2713,12 +2713,12 @@ fieldset[disabled] .checkbox label {
   border-radius: 3px;
 }
 select.input-sm {
-  height: 30px;
+  height: 20px;
   line-height: 30px;
 }
 textarea.input-sm,
 select[multiple].input-sm {
-  height: auto;
+  height: 20px;
 }
 .form-group-sm .form-control {
   height: 30px;
@@ -2728,12 +2728,13 @@ select[multiple].input-sm {
   border-radius: 3px;
 }
 .form-group-sm select.form-control {
-  height: 30px;
+  height: 20px;
   line-height: 30px;
+  margin-left: 10px;
 }
 .form-group-sm textarea.form-control,
 .form-group-sm select[multiple].form-control {
-  height: auto;
+  height: 20px;
 }
 .form-group-sm .form-control-static {
   height: 30px;
