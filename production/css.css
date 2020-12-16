@@ -34,13 +34,11 @@
 .fa-check-circle {
 	color: #2ecc71;
 	visibility: hidden;
-	margin-left: 10px;
 }
 .form-group.error i
 .fa-exclamation-circle {
 	color: #e74c3c;
 	visibility: hidden;
-	margin-left: 10px;
 }
 .form-group small {
 	color: #e74c3c;

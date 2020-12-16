@@ -5,7 +5,7 @@ require 'openDB_resident.php';
 
 	$db = mysqli_connect("localhost","root","","jaguar");
 
-		$sql_u = "DELETE FROM resident WHERE resident_id = '3'";
+		$sql_u = "DELETE FROM resident WHERE resident_id = ''";
 		$res_u = mysqli_query($db, $sql_u) or die (mysqli_error($db));
 
 		if (mysqli_num_rows($res_u) > 0) {

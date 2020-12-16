@@ -12,7 +12,7 @@ require 'openDB_resident.php';
 		$res_u = mysqli_query($db, $sql_u) or die (mysqli_error($db));
 
 		if (mysqli_num_rows($res_u) > 0) {
-  			header("Location: http://localhost/FinalProject/production/dashboard.php");
+  			header("Location: http://localhost/Project-Jaguar/production/dashboard.php");
   			}
 		else{
 			echo '<script>
