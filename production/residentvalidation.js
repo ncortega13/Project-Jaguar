@@ -320,8 +320,7 @@ function myFunction1()
 		}
 	  }
 	 else{
-		setErrorFor(homenum1, 'Home Number cannot be blank');	
-		 return false;
+			setSuccessFor(homenum1);
 	  }
 	  
 	if (homenum2Value != "") 
@@ -335,8 +334,7 @@ function myFunction1()
 		}
 	  }
 	 else{
-		setErrorFor(homenum2, 'Home Number cannot be blank');	
-		 return false;
+			setSuccessFor(homenum2);
 	  }
 
 	if (mobnum1Value != "") 
@@ -350,8 +348,7 @@ function myFunction1()
 		}
 	  }
 	 else{
-		setErrorFor(mobnum1, 'Mobile Number cannot be blank');	
-		 return false;
+			setSuccessFor(mobnum1);	
 	  }
 	  
 	if (mobnum2Value != "") 
@@ -365,8 +362,7 @@ function myFunction1()
 		}
 	  }
 	 else{
-		setErrorFor(mobnum2, 'Mobile Number cannot be blank');	
-		 return false;
+			setSuccessFor(mobnum2);
 	  }
 	  
 		
